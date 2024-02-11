@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>News</title>
+</head>
+<body style="background-color: #7084a0">
+<h1 style="accent-color: #4f4f4f; text-align: center;  font-style: italic;">{{ news.head }}</h1><br>
+<hr>
+<img style="margin-left: 20px; width: 100px;
+    height: auto;" src="new.image" alt="Nu tut xz"><br>
+<hr>
+Главная информация: {{ news.disc }}<br>
+<hr>
+Категории: {{ news.pages_news }}<br>
+<hr>
+Comments: <br>
+<hr>
+{% for i in comment %}
+{{ i.user_name }}<br>
+<blockquote style="margin-left: 20px;">{{ i.user_comment }}</blockquote>
+<hr>
+{% endfor %}
+<a style="text-decoration: none; margin-left: 20px; margin-top: 10px" href="/">Перейти на главную</a><br>
+<a style="text-decoration: none; margin-left: 20px; margin-top: 10px" href="/add-comments">Добавить коммент</a>
+</body>
+</html>
